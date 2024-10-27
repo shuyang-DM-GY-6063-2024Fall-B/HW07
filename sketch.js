@@ -18,7 +18,7 @@ function setup(){
   }
   
 }
-
+// Looks not good
 // function title_star(x, y, scale) {
 //   push();
 //   translate(x, y);
