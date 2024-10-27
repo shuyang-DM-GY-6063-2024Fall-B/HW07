@@ -3,7 +3,7 @@ let mstring = "";
 
 function preload() {
   img = loadImage('../Hamilton.jpg');
-  mstring = loadStrings('../words.txt');
+  mstring = loadStrings('../words.text');
 }
 let wList = [];
 let hList = [];
@@ -135,4 +135,3 @@ function mousePressed(){
   Hamilton(5)
 
 }
-
