@@ -62,6 +62,7 @@ function Hamilton(scale) {
   let mword = mstring.join(' ').split(' ');
   img.resize(0, height/scale);
   img.loadPixels(); 
+  let i = 0; 
 
   for (let idx = 0; idx < img.pixels.length; idx += 4 * 10) {
     let r = img.pixels[idx];  
@@ -78,7 +79,7 @@ function Hamilton(scale) {
       fill(r, g, 0, a);
       let x = (idx / 4) % img.width; 
       let y = floor((idx / 4) / img.width);
-      let i = 0; 
+
       if(mword[i] ==='Non-stop!'|| mword[i] ==='Hamilton'){
         textSize(scale*7)
       }  
@@ -103,7 +104,7 @@ function Hamilton(scale) {
 function draw() {
  background(220);
  let time1 = int(millis()/180)
- scale = map(sin(time1),-1,1,5,8)
+ scale = map(sin(time1),-1,1,4,6)
  scaleStar = map(sin(time1),-1,1,10,30)
  Hamilton(scale) 
  for(i = 0;i <40;i++){
