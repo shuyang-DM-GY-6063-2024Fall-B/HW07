@@ -103,7 +103,7 @@ function Hamilton(scale) {
 function draw() {
  background(220);
  let time1 = int(millis()/180)
- scale = map(sin(time1),-1,1,1,3)
+ scale = map(sin(time1),-1,1,5,8)
  scaleStar = map(sin(time1),-1,1,10,30)
  Hamilton(scale) 
  for(i = 0;i <40;i++){
