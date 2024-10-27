@@ -121,9 +121,6 @@ function draw() {
 
  }
 
-
-
-
 }
 
 function mousePressed(){
