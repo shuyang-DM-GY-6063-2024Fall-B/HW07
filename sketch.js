@@ -2,12 +2,14 @@ let img;
 let mstring = "";
 
 function preload() {
-  img = loadImage('../assets/Hamilton.jpg');
-  mstring = loadStrings('../assets/words.text');
+  img = loadImage('https://raw.githubusercontent.com/shuyang-DM-GY-6063-2024Fall-B/HW07/main/assets/Hamilton.jpg');
+  mstring = loadStrings('https://raw.githubusercontent.com/shuyang-DM-GY-6063-2024Fall-B/HW07/main/assets/words.text');
+
 }
 let wList = [];
 let hList = [];
 function setup(){
+  print(mstring)
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES)
   for(id = 0; id < 40;id++){
@@ -58,6 +60,7 @@ function rain(posx,posy,x,y){
   pop()
 }
 
+
 function Hamilton(scale) {
 
 
@@ -106,21 +109,21 @@ function Hamilton(scale) {
 
 function draw() {
  background(220);
- let time = int(millis()/180)
- scale = map(sin(time),-1,1,5,8)
- scaleStar = map(sin(time),-1,1,10,30)
+ let time1 = int(millis()/180)
+ scale = map(sin(time1),-1,1,5,8)
+ scaleStar = map(sin(time1),-1,1,10,30)
  Hamilton(scale) 
  for(i = 0;i <40;i++){
   x = wList[i]
   y = hList[i]
-  rain(x,y,-(time*100)%(height*1.2),0)
+  rain(x,y,-(time1*100)%(height*1.2),0)
 
  }
 
  for(i = 0;i <40;i++){
   x = wList[i]
   y = hList[i]
-  rain(x,y-height*1.5,-(time*100)%(height*1.2),0)
+  rain(x,y-height*1.5,-(time1*100)%(height*1.2),0)
 
  }
 
