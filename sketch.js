@@ -2,8 +2,8 @@ let img;
 let mstring = "";
 
 function preload() {
-  img = loadImage('../Hamilton.jpg');
-  mstring = loadStrings('../words.text');
+  img = loadImage('../assets/Hamilton.jpg');
+  mstring = loadStrings('../assets/words.text');
 }
 let wList = [];
 let hList = [];
